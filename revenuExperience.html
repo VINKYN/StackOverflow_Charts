@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisation de l'Enquête StackOverflow</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <script src="../code/revenuExperience.js"></script>
+  <script src="../code/config.js"></script>
+  <link rel="stylesheet" type="text/css" href="../style/revenuExperience.css">
+</head>
+
+<body>
+  <header>
+    <a href="menu.html">Menu</a>
+  </header>
+
+  <div class="container">
+    <label for="continent">Choisir un continent:</label>
+    <select id="continent" onchange="LoadDataset()">
+      <option value="Europe">Europe</option>
+      <option value="Amerique">Amérique du Nord</option>
+    </select>
+    <label for="country">Choisir un pays:</label>
+    <select id="country" onchange="loadCountryData()"></select>
+  </div>
+  <h2>Revenu moyen (€) en fonction de l'expérience (années)</h2>
+  <canvas id="incomeChart" width="1200" height="500"></canvas>
+  <h2>Revenu moyen (€) en fonction du niveau d'études</h2>
+  <canvas id="educationChart" width="1200" height="500"></canvas>
+</body>
+
+</html>

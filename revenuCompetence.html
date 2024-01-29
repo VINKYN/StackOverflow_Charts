@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation de l'Enquête StackOverflow</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="../code/revenuCompetence.js"></script>
+    <script src="../code/config.js"></script>
+    <link rel="stylesheet" href="../style/revenuCompetence.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="menu.html">Menu</a>
+    </header>
+    
+    <div class="container">
+        <label for="continent">Sélectionnez un Continent :</label>
+        <select id="continent" onchange="LoadDataset()">
+            <option value="Europe">Europe</option>
+            <option value="Amerique">Amerique</option>
+        </select>
+        <div id="PaysDropdown">
+            <label for="pays">Sélectionnez un Pays :</label>
+            <select id="pays" onchange="LoadPays()"></select>
+        </div>
+        <div id="YearDropdown">
+            <label for="year">Sélectionnez un nombre d'année d'experience :</label>
+            <select id="year" onchange="LoadYear()"></select>
+        </div>
+    </div>
+    <div class="charts-container">
+        <h2><strong>Revenu moyen (€) </strong>en fonction des <strong>plateformes de cloud </strong>utilisées par des professionnels</h2>
+        <canvas id="chart1"></canvas>
+        <h2><strong>Revenu moyen (€)</strong> en fonction des <strong>frameworks </strong>utilisés par un professionnel</h2>
+        <canvas id="chart2"></canvas>
+    </div>
+</body>
+
+</html>

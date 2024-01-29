@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation de l'Enquête StackOverflow</title>
+    <link rel="stylesheet" href="../style/topTechnologie.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="../code/topTechologie.js"></script>
+    <script src="../code/config.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="menu.html">Menu</a>
+    </header>
+    <section class="container">
+        <label for="continent">Sélectionnez le continent :</label>
+        <select id="continent" onchange="LoadData()">
+            <option value="Europe">Europe</option>
+            <option value="Amerique">Amerique</option>
+        </select>
+        <label for="metier">Sélectionnez Un metier :</label>
+        <select id="metier" onchange="LoadData()"></select>
+        <label for="top">Sélectionnez le nombre d'éléments :</label>
+        <select id="top" onchange="LoadData()">
+            <option value="5">Top 5</option>
+            <option value="6">Top 6</option>
+            <option value="7">Top 7</option>
+            <option value="8">Top 8</option>
+        </select>
+    </section>
+    <h2>Top OS Utilisés par les Professionnels  (Nombre d'utilisateur)</h2>
+    <canvas id="osChart" width="1200" height="1000"></canvas>
+    <h2>Top Outils de Communication Utilisés par les Professionnels (Nombre d'utilisateur)</h2>
+    <canvas id="communicationChart" width="1200" height="1000"></canvas>
+</body>
+
+</html>
