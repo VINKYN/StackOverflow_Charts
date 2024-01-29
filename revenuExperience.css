@@ -1,0 +1,109 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  background-color: #f8f8f8;
+  display: grid;
+  place-items: center;
+}
+
+header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+header a {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #333333;
+  position: relative;
+  text-decoration: none;
+}
+
+header a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #F48024;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+header a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  z-index: 1000;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
+.charts-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+canvas {
+  margin-bottom: 1%;
+  margin-top: 1%;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+canvas:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#incomeChart {
+  padding: 2%;
+}
+
+#educationChart {
+  padding: 2%;
+}
+
+#ligne {
+  width: 1200px;
+  border-bottom: 3px solid #f48023;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
